@@ -236,5 +236,22 @@ const WITH_COVERS = new Set(PRODUCTS.map((p) => p.slug))
 export const coverSrc = (slug, width = 1200) =>
   WITH_COVERS.has(slug) ? `/covers/${slug}-${width}.webp` : null
 
+// Goods mockups live in public/images/goods/<image>.webp.
+// Price and art are the same across locales; name/kind/desc are
+// translated per locale in goods.slots (same order, zipped by index).
+export const GOODS = [
+  { id: 'phone-case-aimi', image: 'routina-phone-case-aimi', price: '$24.99' },
+  { id: 'phone-case-ivy', image: 'routina-phone-case-ivy', price: '$24.99' },
+  { id: 'phone-case-tuto', image: 'routina-phone-case-tuto', price: '$24.99' },
+  { id: 'notebook-ivy', image: 'a5-spring-notebook-ivy', price: '$9.99' },
+  { id: 'notebook-luz', image: 'a5-spring-notebook-luz', price: '$9.99' },
+  { id: 'notebook-tuto', image: 'a5-spring-notebook-tuto', price: '$9.99' },
+  { id: 'glass-aimi', image: 'on-the-rocks-glass-aimi-60pct', price: '$14.99' },
+  { id: 'glass-tuto', image: 'on-the-rocks-glass-tuto-60pct', price: '$14.99' },
+  { id: 'desk-mat', image: 'gaming-desk-mat-realistic', price: '$29.99' },
+]
+
+export const goodsSrc = (image) => `/images/goods/${image}.webp`
+
 export const bySlug = (slug) => PRODUCTS.find((p) => p.slug === slug)
 export const byGroup = (group) => PRODUCTS.filter((p) => p.group === group)

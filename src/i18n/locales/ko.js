@@ -165,15 +165,57 @@ export default {
     navLabel: '굿즈',
     mark: '굿즈',
     status: '준비 중',
-    headA: '스티커와 프린트도',
+    headA: '굿즈 몇 가지를',
     headB: '준비하고 있습니다.',
     body:
-      '스티커와 프린트를 비롯한 몇 가지 굿즈를 구상하고 있습니다. 아직 판매 중인 상품은 없으며, 제품이 준비되면 스토어를 열 예정입니다.',
-    slotsTitle: '지금 그리고 있는 것들',
+      '폰케이스, 노트, 글라스 등 몇 가지 굿즈를 준비하고 있습니다. 아직 판매 중인 상품은 없으며, 제품이 준비되면 스토어를 열 예정입니다.',
+    slotsTitle: '지금 준비하고 있는 굿즈',
     slots: [
-      { name: '에폭시 NFC 스티커', kind: '스티커' },
-      { name: '캐릭터 프린트', kind: '프린트' },
-      { name: '스튜디오 의류', kind: '의류' },
+      {
+        name: 'ROUTiNA 폰케이스 — AIMI',
+        kind: '폰케이스',
+        desc: 'Aimi 일러스트를 담은 ROUTiNA 폰케이스입니다.',
+      },
+      {
+        name: 'ROUTiNA 폰케이스 — IVY',
+        kind: '폰케이스',
+        desc: 'Ivy 일러스트를 담은 ROUTiNA 폰케이스입니다.',
+      },
+      {
+        name: 'ROUTiNA 폰케이스 — TUTO',
+        kind: '폰케이스',
+        desc: 'Tuto 일러스트를 담은 ROUTiNA 폰케이스입니다.',
+      },
+      {
+        name: 'A5 스프링 노트 — IVY',
+        kind: '노트',
+        desc: 'Ivy 캐릭터 커버의 A5 스프링 노트입니다.',
+      },
+      {
+        name: 'A5 스프링 노트 — LUZ',
+        kind: '노트',
+        desc: 'LUZ 캐릭터 커버의 A5 스프링 노트입니다.',
+      },
+      {
+        name: 'A5 스프링 노트 — TUTO',
+        kind: '노트',
+        desc: 'Tuto 캐릭터 커버의 A5 스프링 노트입니다.',
+      },
+      {
+        name: '온더락 글라스 — AIMI',
+        kind: '글라스',
+        desc: 'Aimi 라인아트가 들어간 온더락 글라스입니다.',
+      },
+      {
+        name: '온더락 글라스 — TUTO',
+        kind: '글라스',
+        desc: 'Tuto 라인아트가 들어간 온더락 글라스입니다.',
+      },
+      {
+        name: '게이밍 데스크 매트',
+        kind: '마우스패드',
+        desc: '책상 전체를 덮는 대형 게이밍 데스크 매트입니다.',
+      },
     ],
     tba: '미정',
     notifyTitle: '열리면 알고 싶으신가요?',

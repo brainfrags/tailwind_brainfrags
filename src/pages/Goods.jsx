@@ -1,7 +1,7 @@
 import { MessageCircle, ArrowLeft, ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/index.jsx'
-import { LINKS } from '../data/catalog.js'
+import { LINKS, GOODS, goodsSrc } from '../data/catalog.js'
 import { Gutter, Reveal, Marquee } from '../components/Primitives.jsx'
 
 export default function Goods() {
@@ -79,63 +79,47 @@ export default function Goods() {
           </Reveal>
 
           <div className="mt-10 grid gap-px border-line bg-line md:grid-cols-3">
-            {(Array.isArray(slots) ? slots : []).map((slot, i) => (
-              <Reveal key={slot.name} delay={i * 0.08}>
-                <article className="group relative flex h-full flex-col bg-void p-7 md:p-9">
-                  {/* empty frame stands in for the missing product shot */}
-                  <div className="brackets relative aspect-[4/3] w-full border border-line/70">
-                    <div className="absolute inset-0 bg-grid opacity-30" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="font-poster text-4xl text-ink/[0.07] select-none md:text-5xl">
-                        {t('goods.tba')}
+            {(Array.isArray(slots) ? slots : []).map((slot, i) => {
+              const item = GOODS[i]
+              return (
+                <Reveal key={slot.name} delay={i * 0.08}>
+                  <article className="group relative flex h-full flex-col bg-void p-7 md:p-9">
+                    <div className="brackets relative aspect-square w-full border border-line/70 bg-night/40">
+                      <div className="absolute inset-0 bg-grid opacity-20" />
+                      {item && (
+                        <img
+                          src={goodsSrc(item.image)}
+                          alt={slot.name}
+                          loading="lazy"
+                          className="absolute inset-0 size-full object-contain p-4"
+                        />
+                      )}
+                    </div>
+
+                    <div className="mt-6 flex items-baseline gap-3">
+                      <span className="font-mono text-[11px] text-magenta/70">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <h3 className="text-lg font-bold tracking-tight">
+                        {slot.name}
+                      </h3>
+                    </div>
+                    <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">
+                      {slot.desc}
+                    </p>
+                    <div className="mt-4 flex items-center gap-3">
+                      <span className="font-mono text-[10px] tracking-[0.16em] text-faint uppercase">
+                        {slot.kind}
+                      </span>
+                      <span className="h-px w-5 bg-line" />
+                      <span className="font-mono text-[10px] tracking-[0.16em] text-cyan">
+                        {item?.price}
                       </span>
                     </div>
-                    {/* diagonal */}
-                    <svg
-                      className="absolute inset-0 size-full text-line/60"
-                      preserveAspectRatio="none"
-                      viewBox="0 0 100 100"
-                      aria-hidden="true"
-                    >
-                      <line
-                        x1="0"
-                        y1="0"
-                        x2="100"
-                        y2="100"
-                        stroke="currentColor"
-                        strokeWidth="0.25"
-                      />
-                      <line
-                        x1="100"
-                        y1="0"
-                        x2="0"
-                        y2="100"
-                        stroke="currentColor"
-                        strokeWidth="0.25"
-                      />
-                    </svg>
-                  </div>
-
-                  <div className="mt-6 flex items-baseline gap-3">
-                    <span className="font-mono text-[11px] text-magenta/70">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <h3 className="text-lg font-bold tracking-tight">
-                      {slot.name}
-                    </h3>
-                  </div>
-                  <div className="mt-2 flex items-center gap-3">
-                    <span className="font-mono text-[10px] tracking-[0.16em] text-faint uppercase">
-                      {slot.kind}
-                    </span>
-                    <span className="h-px w-5 bg-line" />
-                    <span className="font-mono text-[10px] tracking-[0.16em] text-faint uppercase">
-                      {t('goods.tba')}
-                    </span>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
+                  </article>
+                </Reveal>
+              )
+            })}
           </div>
         </Gutter>
       </section>
