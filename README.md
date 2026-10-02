@@ -1,8 +1,8 @@
-# glitch9.dev
+# brainfrags.com
 
-Glitch9 Inc. official website — React 19 + Vite + Tailwind v4, deployed to GitHub Pages.
+BrainFrags Inc. official website — React 19 + Vite + Tailwind v4, deployed to GitHub Pages.
 
-Repo: <https://github.com/Glitch9Inc/glitch9>
+Repo: <https://github.com/brainfrags/tailwind_brainfrags>
 
 ## Getting started
 
@@ -122,7 +122,7 @@ loosens `.display-heading` under `html[lang="ko"]` / `[lang="ja"]`, and sets
 template and public key as aidevkit.dev — see `src/config/contact.js`. Those
 three values are publishable by design and already ship in that site's bundle;
 they are not secrets. What actually protects the endpoint is the **allowed
-domains** list in the EmailJS dashboard, so add `glitch9.dev` there.
+domains** list in the EmailJS dashboard, so add `brainfrags.com` there.
 
 Override per environment with a `.env` file if you ever want a separate
 template:
@@ -167,7 +167,7 @@ art component registered in `TITLE_ART`.
 `.github/workflows/deploy.yml` builds and publishes on every push to `main`.
 
 1. GitHub repo → **Settings → Pages → Source: GitHub Actions**
-2. `public/CNAME` already contains `glitch9.dev`
+2. `public/CNAME` already contains `brainfrags.com`
 3. Point DNS at GitHub Pages (see `DESIGN.md` § 6)
 
 `base` is `/` in `vite.config.js` because the site runs on a custom domain.
@@ -182,7 +182,8 @@ of reaching the client router. Keep that plugin as long as any route exists.
 - [ ] Real key art for CityChat (generated SVG for now)
 - [ ] A real Lock Task cover (currently composited from its store icon)
 - [ ] Send a real test through the contact form and confirm it arrives
-- [ ] Add glitch9.dev to the EmailJS allowed-domains list
+- [ ] Add brainfrags.com to the EmailJS allowed-domains list
+- [ ] Redirect glitch9.dev → brainfrags.com (DNS/host-level redirect for the old domain)
 - [ ] Rewrite the legal documents — the ported text is from 2020 and covers a
       game service, not this site. See `docs/LEGAL-NOTES.md`
 - [ ] Korean privacy policy (none exists in the source material)

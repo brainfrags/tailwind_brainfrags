@@ -9,7 +9,7 @@ export default {
   },
 
   hero: {
-    rail: 'GLITCH9 INC. — EST. 2021',
+    rail: 'BRAINFRAGS INC. — EST. 2021',
     line1: '夢中になれる世界。',
     line2: '心に残る体験。',
     body:
@@ -140,7 +140,7 @@ export default {
     discordValue: 'コミュニティに参加',
     xLabel: 'X',
     githubLabel: 'GitHub',
-    githubValue: 'Glitch9Inc',
+    githubValue: 'brainfrags',
     topicLabel: 'ご用件は？',
     topics: {
       support: 'プラグインのサポート',

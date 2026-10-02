@@ -86,7 +86,7 @@ export default function Footer() {
         {/* oversized wordmark */}
         <div className="mt-16 -mb-3 overflow-hidden">
           <span className="font-poster block text-[16vw] leading-[0.8] tracking-[0.02em] text-ink/[0.06] select-none">
-            GLITCH9
+            BRAINFRAGS
           </span>
         </div>
       </Gutter>
@@ -94,7 +94,7 @@ export default function Footer() {
       <div className="border-t border-line">
         <Gutter className="flex flex-col gap-2 py-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-mono text-[10px] tracking-[0.16em] text-faint uppercase">
-            © {year} Glitch9 Inc. — {t('footer.rights')}
+            © {year} BrainFrags Inc. — {t('footer.rights')}
           </p>
           <p className="font-mono text-[10px] tracking-[0.16em] text-faint uppercase">
             Munchkin Production

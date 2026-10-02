@@ -51,11 +51,11 @@ export default function Navbar() {
       >
         <div className="mx-auto flex h-16 max-w-[88rem] items-center justify-between px-6 md:h-18 md:px-10 lg:px-16 xl:px-20">
           {onHome ? (
-            <a href="#top" aria-label="Glitch9 home">
+            <a href="#top" aria-label="BrainFrags home">
               <Logo />
             </a>
           ) : (
-            <Link to="/" aria-label="Glitch9 home">
+            <Link to="/" aria-label="BrainFrags home">
               <Logo />
             </Link>
           )}

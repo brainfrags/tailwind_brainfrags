@@ -15,11 +15,11 @@ export const LINKS = {
   docsNativeMediaPlayer: 'https://glitch9.gitbook.io/native-media-player',
   apiReference: 'https://glitch9inc.github.io/DocFx.AIDevKit/',
   aidevkit: 'https://aidevkit.dev',
-  github: 'https://github.com/Glitch9Inc',
+  github: 'https://github.com/brainfrags',
   discord: 'https://discord.gg/hgajxPpJYf',
   x: 'https://x.com/Glitch9359327',
   xHandle: '@Glitch9359327',
-  email: 'munchkin@glitch9.dev',
+  email: 'munchkin@brainfrags.com',
 }
 
 export const PRODUCTS = [

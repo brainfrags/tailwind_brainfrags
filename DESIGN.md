@@ -1,4 +1,4 @@
-# Glitch9 Official Website — 설계 문서
+# BrainFrags Official Website — 설계 문서
 
 > WordPress(카페24) → React + Vite + Tailwind v4 → GitHub Pages 전면 재구축
 > 작성일: 2026-08-04
@@ -12,11 +12,11 @@
 | 성격 | **스튜디오 정체성 중심** 기업 사이트 (툴 + 게임/앱을 아우르는 우산 브랜드) |
 | 톤 | 다크 베이스 + 서브컬처 색감 (네온/글리치) |
 | 언어 | 영어 · 한국어 · 일본어 (기본값: 브라우저 언어 감지, EN 폴백) |
-| 호스팅 | GitHub Pages + 커스텀 도메인 `glitch9.dev` |
+| 호스팅 | GitHub Pages + 커스텀 도메인 `brainfrags.com` (구 `glitch9.dev`는 리다이렉트) |
 | 제외 | 결제/커머스 (실물 굿즈는 2년 후 예정 — 지금은 티저 수준만) |
 
 ### 사이트가 답해야 할 3가지
-1. Glitch9은 **무엇을 만드는 곳인가** (Unity 개발자 툴 + 게임/앱)
+1. BrainFrags는 **무엇을 만드는 곳인가** (Unity 개발자 툴 + 게임/앱)
 2. **지금 살 수 있는 것**은 무엇인가 (Asset Store 링크, 문서 링크)
 3. **누가** 만드는가 (스튜디오·연혁·연락)
 
@@ -93,9 +93,9 @@
 - 문서: `https://glitch9.gitbook.io/docs`
 - API 레퍼런스: `https://glitch9inc.github.io/DocFx.AIDevKit/`
 - 제품 사이트: `https://aidevkit.dev`
-- GitHub: `https://github.com/Glitch9Inc`
+- GitHub: `https://github.com/brainfrags`
 - Discord: `https://discord.gg/hgajxPpJYf`
-- Email: `munchkin@glitch9.dev`
+- Email: `munchkin@brainfrags.com`
 
 ### Games & Apps
 - **ROUTiNA** — Flutter 기반 AI 컴패니언 앱 (개발 중)
@@ -103,7 +103,7 @@
 - *(추가 항목은 WordPress export 확인 후 반영)*
 
 > **Galaxxy Idols는 이 사이트에 절대 넣지 않는다.** 전 회사(Munchkin
-> Production) 작품이며 Glitch9 포트폴리오가 아니다. 관련 수치(50만 다운로드
+> Production) 작품이며 BrainFrags 포트폴리오가 아니다. 관련 수치(50만 다운로드
 > 등)도 마찬가지로 사용 금지.
 
 ---
@@ -192,14 +192,14 @@ src/i18n/
 ## 6. 배포
 
 ```
-GitHub repo: https://github.com/Glitch9Inc/glitch9
+GitHub repo: https://github.com/brainfrags/tailwind_brainfrags
 빌드: vite build → dist/
 배포: GitHub Actions (main push 시 자동)
-도메인: public/CNAME = glitch9.dev
+도메인: public/CNAME = brainfrags.com
 ```
 
-### DNS 전환 (카페24 → GitHub Pages)
-카페24 DNS 관리에서 `glitch9.dev`의 레코드를 교체:
+### DNS 전환 (구 glitch9.dev → brainfrags.com, GitHub Pages)
+`brainfrags.com`의 DNS 레코드를 등록하고, 기존 `glitch9.dev`는 이 도메인으로 리다이렉트:
 
 | 타입 | 호스트 | 값 |
 |---|---|---|
@@ -207,7 +207,7 @@ GitHub repo: https://github.com/Glitch9Inc/glitch9
 | A | @ | 185.199.109.153 |
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
-| CNAME | www | glitch9inc.github.io |
+| CNAME | www | brainfrags.github.io |
 
 > ⚠️ **전환 순서**: GitHub Pages에서 빌드 확인 → DNS 변경 → 전파(최대 24h) 대기 → HTTPS(Let's Encrypt) 자동 발급 확인 → 그 다음 카페24 워드프레스 정리. 기존 사이트는 백업 후 최소 1개월 유지 권장.
 
