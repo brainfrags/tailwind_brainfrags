@@ -96,9 +96,6 @@ export default function Footer() {
           <p className="font-mono text-[10px] tracking-[0.16em] text-faint uppercase">
             © {year} BrainFrags Inc. — {t('footer.rights')}
           </p>
-          <p className="font-mono text-[10px] tracking-[0.16em] text-faint uppercase">
-            Munchkin Production
-          </p>
         </Gutter>
       </div>
     </footer>
